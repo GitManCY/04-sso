@@ -6,7 +6,7 @@
 </head>
 <body>
 login-main
-<a   th:if="${session.result == null}" href="http://login.cy.com:9090/view/login?target=http://main.cy.com:9090/view/main">登陆</a>
+<a   th:if="${session.result == null}" href="http://login.cy.com:9090/view/login?target=http://login.cy.com:9090/view/main">登陆</a>
 <a th:if="${session.result != null}" href="http://login.cy.com:9090/loginout">退出</a>
 </body>
 </html>
