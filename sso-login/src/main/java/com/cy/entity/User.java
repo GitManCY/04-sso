@@ -20,5 +20,5 @@ import lombok.experimental.Accessors;
 public class User {
     private Integer id;
     private String telephone;
-    private String code;
+    private String password;
 }

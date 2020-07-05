@@ -7,9 +7,19 @@
 <body>
 <form action="/login" method="post">
     手机号:<input type="text" name="telephone">
+    <a href="http://login.cy.com:9090/send/15583082980">获取验证码</a>
     验证码:<input type="text" name="code">
     <button type="submit">登陆</button>
 </form>
 <p th:text="${session.msg}"></p>
+<hr>
+<form action="/retrieve" method="post">
+    手机号:<input type="text" name="telephone">
+    <a href="http://login.cy.com:9090/retrieve/15583082980">获取验证码</a>
+    验证码:<input type="text" name="code">
+    密码:<input type="password" name="password">
+    <button type="submit">找回重置密码</button>
+</form>
+<p th:text="${session.dbUser}"></p>
 </body>
 </html>

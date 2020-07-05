@@ -33,16 +33,17 @@ public class ViewController {
         if (cookie != null) {
             String value = cookie.getValue();
             System.out.println(value);
-              //TODO  cookie已经写出来了 但是拿到的USER值为空
+            //TODO  cookie已经写出来了 但是拿到的USER值为空
 //            User user = LoginCache.login.get(value);
 //            System.out.println(user);
             if (!StringUtils.isEmpty(value)) {
-                session.setAttribute("result","已经登陆");
+                session.setAttribute("result", "已经登陆");
                 return "redirect:" + target;
             }
         }
         //TODO 要做target重定向校验
         session.setAttribute("target", target);
+        System.out.println(target);
         return "login";
     }
 
@@ -55,7 +56,7 @@ public class ViewController {
 //            User user = LoginCache.login.get(value);
 //            System.out.println(user);
             if (!StringUtils.isEmpty(value)) {
-                session.setAttribute("result","已经登陆");
+                session.setAttribute("result", "已经登陆");
             }
         }
         return "login-main";
